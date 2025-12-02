@@ -133,9 +133,9 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
 								"Get a detailed response within 24 hours",
 							content: (
 								<a
-									href="mailto:unityhomecare874@gmail.com"
+									href="mailto:anjemmedicaresolutions@gmail.com"
 									className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
-									homecareunity17@gmail.com
+									anjemmedicaresolutions@gmail.com
 								</a>
 							),
 							gradient: "from-purple-500 to-pink-500",

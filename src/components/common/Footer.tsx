@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
 							/>
 						</div>
 						<span className="text-2xl font-bold text-white">
-							Anjem Medicare Solutions
+							Anjem MediCare Solutions
 						</span>
 					</motion.div>
 
@@ -81,7 +81,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
 							<Phone className="h-6 w-6" aria-hidden="true" />
 						</a>
 						<a
-							href="mailto:homecareunity17@gmail.com"
+							href="mailto:anjemmedicaresolutions@gmail.com"
 							className="text-gray-400 hover:text-white transition-colors"
 							aria-label="Email Anjem Medicare Solutions">
 							<Mail className="h-6 w-6" aria-hidden="true" />

@@ -47,7 +47,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ darkMode }) => {
 								}`}>
 								Why Choose{" "}
 								<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-									Anjem Medicare?
+									Anjem MediCare?
 								</span>
 							</h2>
 							<p
