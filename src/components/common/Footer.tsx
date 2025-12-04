@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
 							/>
 						</div>
 						<span className="text-2xl font-bold text-white">
-							Anjem MediCare Solutions
+							Unity HomeCare Solutions
 						</span>
 					</motion.div>
 
