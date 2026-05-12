@@ -7,6 +7,7 @@ import Footer from "../components/common/Footer";
 import { SERVICES } from "../config/services";
 import Contact from "../components/sections/Contact";
 import { useTheme } from "../../hooks/useTheme";
+import Testimonials from "../components/sections/Testimonials";
 
 const UnityHomeCare = () => {
 	const { darkMode, toggleTheme } = useTheme();
@@ -40,6 +41,7 @@ const UnityHomeCare = () => {
 			<Hero scrollToSection={scrollToSection} />
 			<AboutUs />
 			<Services />
+			<Testimonials />
 			<Contact />
 			<Footer />
 		</div>

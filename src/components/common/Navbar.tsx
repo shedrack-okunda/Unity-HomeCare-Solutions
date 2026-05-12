@@ -34,7 +34,13 @@ const Navbar = ({
 
 				{/* Desktop Menu */}
 				<div className="hidden md:flex items-center space-x-8">
-					{["home", "about", "services", "contact"].map((section) => (
+					{[
+						"home",
+						"about",
+						"services",
+						"testimonials",
+						"contact",
+					].map((section) => (
 						<button
 							key={section}
 							onClick={() => scrollToSection(section)}
@@ -81,7 +87,13 @@ const Navbar = ({
 			{/* Mobile Menu */}
 			{isMenuOpen && (
 				<div className="md:hidden mt-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800">
-					{["home", "about", "services", "contact"].map((section) => (
+					{[
+						"home",
+						"about",
+						"services",
+						"testimonials",
+						"contact",
+					].map((section) => (
 						<button
 							key={section}
 							onClick={() => scrollToSection(section)}
