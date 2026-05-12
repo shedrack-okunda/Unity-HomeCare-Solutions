@@ -16,12 +16,7 @@ const Navbar = ({
 	scrollToSection,
 }: NavbarProps) => {
 	return (
-		<nav
-			className={`fixed w-full z-50 transition-all duration-300 ${
-				darkMode
-					? "bg-gray-900/95 border-gray-700"
-					: "bg-white/95 border-gray-100"
-			} border-b backdrop-blur-lg`}>
+		<nav className="fixed w-full z-50 transition-all duration-300 bg-white/95 dark:bg-gray-900/95 border-b border-gray-100 dark:border-gray-700 backdrop-blur-lg">
 			<div className="container mx-auto px-6 py-4 flex items-center justify-between">
 				{/* Logo */}
 				<div className="flex items-center space-x-3">
@@ -31,6 +26,7 @@ const Navbar = ({
 						loading="lazy"
 						className="w-13 h-13 rounded-full"
 					/>
+
 					<span className="text-md font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 						Unity HomeCare
 					</span>
@@ -42,19 +38,14 @@ const Navbar = ({
 						<button
 							key={section}
 							onClick={() => scrollToSection(section)}
-							className={`font-bold hover:text-blue-600 transition-colors ${
-								darkMode ? "text-gray-300" : "text-gray-700"
-							}`}>
+							className="font-bold text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">
 							{section.charAt(0).toUpperCase() + section.slice(1)}
 						</button>
 					))}
+
 					<button
 						onClick={toggleDarkMode}
-						className={`p-2 rounded-lg transition-all hover:scale-110 ${
-							darkMode
-								? "bg-gray-800 text-yellow-500"
-								: "bg-gray-100 text-gray-700"
-						}`}>
+						className="p-2 rounded-lg transition-all hover:scale-110 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-yellow-500">
 						{darkMode ? (
 							<Sun className="h-5 w-5" />
 						) : (
@@ -67,24 +58,17 @@ const Navbar = ({
 				<div className="flex items-center space-x-4 md:hidden">
 					<button
 						onClick={toggleDarkMode}
-						className={`p-2 rounded-lg ${
-							darkMode
-								? "bg-gray-800 text-yellow-500"
-								: "bg-gray-100 text-gray-700"
-						}`}>
+						className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-yellow-500">
 						{darkMode ? (
 							<Sun className="h-5 w-5" />
 						) : (
 							<Moon className="h-5 w-5" />
 						)}
 					</button>
+
 					<button
 						onClick={() => setIsMenuOpen(!isMenuOpen)}
-						className={`p-2 rounded-lg ${
-							darkMode
-								? "bg-gray-800 text-white"
-								: "bg-gray-100 text-gray-700"
-						}`}>
+						className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white">
 						{isMenuOpen ? (
 							<X className="h-6 w-6" />
 						) : (
@@ -96,17 +80,12 @@ const Navbar = ({
 
 			{/* Mobile Menu */}
 			{isMenuOpen && (
-				<div
-					className={`md:hidden mt-4 p-4 rounded-xl ${
-						darkMode ? "bg-gray-800" : "bg-gray-50"
-					}`}>
+				<div className="md:hidden mt-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800">
 					{["home", "about", "services", "contact"].map((section) => (
 						<button
 							key={section}
 							onClick={() => scrollToSection(section)}
-							className={`font-bold block w-full text-left py-2 hover:text-blue-600 transition-colors ${
-								darkMode ? "text-gray-300" : "text-gray-700"
-							}`}>
+							className="font-bold block w-full text-left py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">
 							{section.charAt(0).toUpperCase() + section.slice(1)}
 						</button>
 					))}

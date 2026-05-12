@@ -6,9 +6,10 @@ import AboutUs from "../components/sections/About";
 import Footer from "../components/common/Footer";
 import { SERVICES } from "../config/services";
 import Contact from "../components/sections/Contact";
+import { useTheme } from "../../hooks/useTheme";
 
 const UnityHomeCare = () => {
-	const [darkMode, setDarkMode] = useState(false);
+	const { darkMode, toggleTheme } = useTheme();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [activeService, setActiveService] = useState(0);
 	console.log(activeService);
@@ -20,8 +21,6 @@ const UnityHomeCare = () => {
 		return () => clearInterval(interval);
 	}, []);
 
-	const toggleDarkMode = () => setDarkMode(!darkMode);
-
 	const scrollToSection = (sectionId: string) => {
 		document
 			.getElementById(sectionId)
@@ -30,22 +29,19 @@ const UnityHomeCare = () => {
 	};
 
 	return (
-		<div
-			className={`min-h-screen transition-all duration-500 ${
-				darkMode ? "dark bg-gray-900" : "bg-white"
-			}`}>
+		<div className="min-h-screen transition-all duration-500 bg-white dark:bg-gray-900">
 			<Navbar
 				darkMode={darkMode}
-				toggleDarkMode={toggleDarkMode}
+				toggleDarkMode={toggleTheme}
 				isMenuOpen={isMenuOpen}
 				setIsMenuOpen={setIsMenuOpen}
 				scrollToSection={scrollToSection}
 			/>
-			<Hero darkMode={darkMode} scrollToSection={scrollToSection} />
-			<AboutUs darkMode={darkMode} />
-			<Services darkMode={darkMode} />
-			<Contact darkMode={darkMode} />
-			<Footer darkMode={darkMode} />
+			<Hero scrollToSection={scrollToSection} />
+			<AboutUs />
+			<Services />
+			<Contact />
+			<Footer />
 		</div>
 	);
 };

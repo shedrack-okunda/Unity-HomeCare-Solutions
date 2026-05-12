@@ -3,7 +3,6 @@ import { motion, type Variants } from "framer-motion";
 import type React from "react";
 
 interface HeroProps {
-	darkMode: boolean;
 	scrollToSection: (sectionId: string) => void;
 }
 
@@ -33,7 +32,11 @@ const buttonVariants: Variants = {
 	visible: (i: number) => ({
 		opacity: 1,
 		scale: 1,
-		transition: { duration: 0.5, delay: 0.4 + i * 0.15, ease: "easeOut" },
+		transition: {
+			duration: 0.5,
+			delay: 0.4 + i * 0.15,
+			ease: "easeOut",
+		},
 	}),
 };
 
@@ -43,7 +46,11 @@ const statsVariants: Variants = {
 	visible: (i: number) => ({
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.5, delay: 0.8 + i * 0.2, ease: "easeOut" },
+		transition: {
+			duration: 0.5,
+			delay: 0.8 + i * 0.2,
+			ease: "easeOut",
+		},
 	}),
 };
 
@@ -58,16 +65,12 @@ const imageVariants: Variants = {
 	},
 };
 
-const Hero: React.FC<HeroProps> = ({ darkMode, scrollToSection }) => {
+const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
 	return (
 		<section
 			id="home"
 			aria-labelledby="hero-heading"
-			className={`pt-20 pb-16 px-6 bg-gradient-to-br ${
-				darkMode
-					? "from-gray-900 via-gray-900 to-gray-900"
-					: "from-blue-50 via-purple-50 to-pink-50"
-			}`}>
+			className="pt-20 pb-16 px-6 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
 			<div className="container mx-auto">
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					{/* Left content */}
@@ -78,12 +81,9 @@ const Hero: React.FC<HeroProps> = ({ darkMode, scrollToSection }) => {
 								whileInView="visible"
 								viewport={{ once: true }}
 								variants={paragraphVariants}
-								className={`inline-flex items-center px-4 py-2 mt-4 rounded-full ${
-									darkMode
-										? "bg-blue-900/50 text-blue-300 border border-blue-700"
-										: "bg-blue-100 text-blue-800 border border-blue-200"
-								}`}>
+								className="inline-flex items-center px-4 py-2 mt-4 rounded-full bg-blue-100 text-blue-800 border border-blue-200 dark:bg-blue-900/50 dark:text-blue-300 dark:border-blue-700">
 								<Shield className="h-4 w-4 mr-2" />
+
 								<span className="text-sm font-medium">
 									Trusted Professional Care
 								</span>
@@ -95,9 +95,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode, scrollToSection }) => {
 								whileInView="visible"
 								viewport={{ once: true }}
 								variants={titleVariants}
-								className={`text-5xl lg:text-7xl font-bold leading-tight ${
-									darkMode ? "text-white" : "text-gray-900"
-								}`}>
+								className="text-5xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white">
 								Caring for Your{" "}
 								<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 									Loved Ones
@@ -110,9 +108,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode, scrollToSection }) => {
 								whileInView="visible"
 								viewport={{ once: true }}
 								variants={paragraphVariants}
-								className={`text-xl leading-relaxed ${
-									darkMode ? "text-gray-300" : "text-gray-600"
-								}`}>
+								className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
 								Professional home healthcare services providing
 								compassionate, personalized care in the comfort
 								of your own home. We're here when you need us
@@ -143,19 +139,18 @@ const Hero: React.FC<HeroProps> = ({ darkMode, scrollToSection }) => {
 									variants={buttonVariants}
 									onClick={btn.onClick}
 									className={`inline-flex items-center justify-center gap-2 
-		px-6 py-3 rounded-xl font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-offset-2
-		${
-			btn.primary
-				? `group bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white 
-					hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 
-					shadow-lg hover:shadow-blue-500/40 
-					border border-transparent hover:border-blue-400 
-					hover:-translate-y-0.5`
-				: darkMode
-				? "border-2 border-gray-600 text-white hover:bg-gray-800 focus:ring-gray-500"
-				: "border-2 border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-300"
-		}`}>
+px-6 py-3 rounded-xl font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-offset-2
+${
+	btn.primary
+		? `group bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white 
+		hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 
+		shadow-lg hover:shadow-blue-500/40 
+		border border-transparent hover:border-blue-400 
+		hover:-translate-y-0.5`
+		: "border-2 border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-300 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-gray-500"
+}`}>
 									{btn.label}
+
 									{btn.primary && (
 										<ArrowRight
 											className="h-5 w-5 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
@@ -181,20 +176,11 @@ const Hero: React.FC<HeroProps> = ({ darkMode, scrollToSection }) => {
 									viewport={{ once: true }}
 									variants={statsVariants}
 									className="text-center">
-									<div
-										className={`text-3xl font-bold ${
-											darkMode
-												? "text-white"
-												: "text-gray-900"
-										}`}>
+									<div className="text-3xl font-bold text-gray-900 dark:text-white">
 										{stat.value}
 									</div>
-									<div
-										className={`text-sm ${
-											darkMode
-												? "text-gray-400"
-												: "text-gray-600"
-										}`}>
+
+									<div className="text-sm text-gray-600 dark:text-gray-400">
 										{stat.label}
 									</div>
 								</motion.div>

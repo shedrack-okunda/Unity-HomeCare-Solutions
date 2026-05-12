@@ -1,10 +1,5 @@
-import type React from "react";
 import { motion, type Variants } from "framer-motion";
 import { SERVICES } from "../../config/services";
-
-interface ServicesProps {
-	darkMode: boolean;
-}
 
 // 🎬 Variants
 const headingVariants: Variants = {
@@ -35,12 +30,12 @@ const cardVariants: Variants = {
 	}),
 };
 
-const Services: React.FC<ServicesProps> = ({ darkMode }) => {
+const Services = () => {
 	return (
 		<section
 			id="services"
 			aria-labelledby="services-heading"
-			className={`py-20 px-6 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}>
+			className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
 			<div className="container mx-auto">
 				{/* Header */}
 				<div className="text-center mb-16">
@@ -50,9 +45,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 						whileInView="visible"
 						viewport={{ once: true }}
 						variants={headingVariants}
-						className={`text-4xl lg:text-5xl font-bold mb-6 ${
-							darkMode ? "text-white" : "text-gray-900"
-						}`}>
+						className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
 						Our{" "}
 						<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 							Services
@@ -64,9 +57,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 						whileInView="visible"
 						viewport={{ once: true }}
 						variants={paragraphVariants}
-						className={`text-xl max-w-3xl mx-auto ${
-							darkMode ? "text-gray-300" : "text-gray-600"
-						}`}>
+						className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
 						Comprehensive home healthcare services tailored to meet
 						your unique needs with compassion and expertise.
 					</motion.p>
@@ -84,7 +75,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 								color,
 								image,
 							},
-							i
+							i,
 						) => (
 							<motion.div
 								key={id}
@@ -93,15 +84,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 								whileInView="visible"
 								viewport={{ once: true }}
 								variants={cardVariants}
-								className={`group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-br ${
-									darkMode
-										? "from-gray-900 via-gray-800 to-gray-900"
-										: "from-blue-50 via-purple-100 to-blue-50"
-								} border ${
-									darkMode
-										? "border-gray-700"
-										: "border-gray-100"
-								} flex flex-col`}>
+								className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-br from-blue-50 via-purple-100 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 border border-gray-100 dark:border-gray-700 flex flex-col">
 								{/* Icon + Title */}
 								<div className="relative z-10 p-4 sm:p-6 lg:p-8">
 									<motion.div
@@ -112,7 +95,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 											duration: 0.5,
 											delay: 0.2,
 										}}
-										className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl bg-gradient-to-r ${color} flex items-center justify-center text-lg sm:text-xl lg:text-2xl mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+										className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl bg-gradient-to-r ${color} flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
 										<Icon aria-hidden="true" />
 									</motion.div>
 
@@ -124,11 +107,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 											duration: 0.6,
 											delay: 0.3,
 										}}
-										className={`text-lg sm:text-xl lg:text-xl font-bold mb-3 sm:mb-4 lg:mb-4 ${
-											darkMode
-												? "text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r"
-												: "text-transparent bg-clip-text bg-gradient-to-r"
-										} ${color} transition-all duration-300`}>
+										className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-white">
 										{title}
 									</motion.h3>
 								</div>
@@ -139,12 +118,10 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 										initial={{ opacity: 0, scale: 0.95 }}
 										whileInView={{ opacity: 1, scale: 1 }}
 										viewport={{ once: true }}
-										transition={{
-											duration: 0.7,
-										}}
+										transition={{ duration: 0.7 }}
 										src={image}
 										alt={title}
-										className="absolute inset-0 w-full h-full object-cover transition-all duration-700 brightness-75 group-hover:brightness-60 group-hover:scale-110"
+										className="absolute inset-0 w-full h-full object-cover brightness-75 group-hover:brightness-60 group-hover:scale-110 transition-all duration-700"
 										loading="lazy"
 										width={400}
 										height={300}
@@ -161,11 +138,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 											duration: 0.6,
 											delay: 0.5,
 										}}
-										className={`text-md font-semibold md:text-base lg:text-base leading-relaxed transition-all duration-300 ${
-											darkMode
-												? `text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r ${color}`
-												: "text-gray-700"
-										}`}>
+										className="text-md md:text-base lg:text-base leading-relaxed text-gray-700 dark:text-white">
 										{description}
 									</motion.p>
 
@@ -181,7 +154,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
 									/>
 								</div>
 							</motion.div>
-						)
+						),
 					)}
 				</div>
 			</div>
