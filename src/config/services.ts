@@ -28,7 +28,7 @@ export const SERVICES: Services[] = [
 			"Comprehensive support during your transition from hospital to home, ensuring continuity of care and peace of mind.",
 		icon: Home,
 		color: "from-blue-500 to-cyan-500",
-		image: "/images/postdischarge.png",
+		image: "/images/postdischarge.avif",
 	},
 	{
 		id: "mobility-assistance",
@@ -56,7 +56,7 @@ export const SERVICES: Services[] = [
 			"Professional wound assessment, cleaning, and dressing changes following medical protocols.",
 		icon: Bandage,
 		color: "from-pink-500 to-rose-500",
-		image: "/images/wound.png",
+		image: "/images/wound.avif",
 	},
 	{
 		id: "monitoring-vitals",
@@ -65,7 +65,7 @@ export const SERVICES: Services[] = [
 			"Regular monitoring of blood pressure, temperature, pulse, and other vital signs for your safety.",
 		icon: BarChart,
 		color: "from-purple-500 to-violet-500",
-		image: "/images/vitals.png",
+		image: "/images/vitals.avif",
 	},
 	{
 		id: "bathing-grooming",
