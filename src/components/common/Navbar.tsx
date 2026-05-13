@@ -24,7 +24,7 @@ const Navbar = ({
 						src="/images/unitylogo.png"
 						alt="Unity Logo"
 						loading="lazy"
-						className="w-13 h-13 rounded-full"
+						className="w-10 h-10 rounded-full"
 					/>
 
 					<span className="text-md font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

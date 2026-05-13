@@ -2,19 +2,44 @@ export const testimonials = [
 	{
 		name: "Peter Kamau",
 		role: "Patient",
+		image: "/images/testimonials/peter.jpg",
 		message:
-			"I was cared for with great compassion and dignity. The nurses ensured I recovered comfortably at home, and I felt safe every step of the way.",
+			"The caregivers treated me with kindness and professionalism. I recovered peacefully at home surrounded by my family.",
 	},
 	{
 		name: "Jane Njeri",
-		role: "Family Member",
+		role: "Daughter of Patient",
 		message:
-			"My parent received exceptional home care. The team was professional, patient, and always available whenever we needed support or reassurance.",
+			"The team gave my mother exceptional care and always kept us informed. We truly felt supported during a difficult time.",
 	},
 	{
-		name: "Paul Mwai",
-		role: "Nurse",
+		name: "Muhammad Noor",
+		role: "Patient",
 		message:
-			"Working here is fulfilling. We are trained to give not just medical support, but genuine human care that respects every patient’s dignity.",
+			"Unity HomeCare gave me confidence and comfort throughout my treatment journey. Their staff were always attentive and compassionate.",
+	},
+	{
+		name: "Fatima Khadija",
+		role: "Family Member",
+		message:
+			"The nurses were patient, respectful, and caring toward my father. We are deeply grateful for their support and professionalism.",
+	},
+	{
+		name: "Maryanne Moraa",
+		role: "Patient",
+		message:
+			"I appreciated the warmth and dedication shown by the caregivers. The service made recovery much easier and less stressful.",
+	},
+	{
+		name: "Ahmed Abdullahi",
+		role: "Son of Patient",
+		message:
+			"The homecare team treated my mother with dignity and genuine compassion. Their commitment exceeded our expectations.",
+	},
+	{
+		name: "Roshni Karitika",
+		role: "Patient",
+		message:
+			"Excellent service and caring staff. I always felt safe, respected, and well looked after during my care experience.",
 	},
 ];
