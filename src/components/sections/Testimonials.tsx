@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { testimonials } from "../../config/testimonials";
@@ -32,15 +32,6 @@ const cardVariants: Variants = {
 const Testimonials = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [direction, setDirection] = useState(1);
-
-	// Auto slide every 8 seconds
-	useEffect(() => {
-		const interval = setInterval(() => {
-			nextSlide();
-		}, 8000);
-
-		return () => clearInterval(interval);
-	}, []);
 
 	const nextSlide = () => {
 		setDirection(1);

@@ -85,7 +85,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
 								<Shield className="h-4 w-4 mr-2" />
 
 								<span className="text-sm font-medium">
-									Trusted Professional Care
+									Compassionate Home Healthcare{" "}
 								</span>
 							</motion.div>
 
@@ -95,12 +95,12 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
 								whileInView="visible"
 								viewport={{ once: true }}
 								variants={titleVariants}
-								className="text-5xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white">
-								Caring for Your{" "}
+								className="text-3xl lg:text-5xl font-bold leading-tight text-gray-900 dark:text-white">
+								Providing Trusted Care for Your{" "}
 								<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 									Loved Ones
 								</span>
-								<br /> At Home
+								<br /> at Home
 							</motion.h1>
 
 							<motion.p
@@ -109,10 +109,10 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
 								viewport={{ once: true }}
 								variants={paragraphVariants}
 								className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
-								Professional home healthcare services providing
-								compassionate, personalized care in the comfort
-								of your own home. We're here when you need us
-								most.
+								We provide compassionate home nursing and
+								personalized healthcare support to help your
+								loved ones recover, heal, and live comfortably
+								in the place they feel safest — home.
 							</motion.p>
 						</div>
 
