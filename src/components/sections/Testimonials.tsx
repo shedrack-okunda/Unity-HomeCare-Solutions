@@ -65,7 +65,12 @@ const Testimonials = () => {
 				{/* Heading */}
 				<div className="text-center mb-14">
 					<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-						What People Say
+						What
+						<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+							{" "}
+							People{" "}
+						</span>{" "}
+						Say
 					</h2>
 
 					<p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">

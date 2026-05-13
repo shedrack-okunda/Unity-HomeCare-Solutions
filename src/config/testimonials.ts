@@ -2,15 +2,14 @@ export const testimonials = [
 	{
 		name: "Peter Kamau",
 		role: "Patient",
-		image: "/images/testimonials/peter.jpg",
 		message:
-			"The caregivers treated me with kindness and professionalism. I recovered peacefully at home surrounded by my family.",
+			"I was treated with genuine kindness and respect throughout my recovery. I recovered peacefully at home surrounded by my family.",
 	},
 	{
 		name: "Jane Njeri",
 		role: "Daughter of Patient",
 		message:
-			"The team gave my mother exceptional care and always kept us informed. We truly felt supported during a difficult time.",
+			"My mother received consistent, attentive care, and we were always updated. We truly felt supported during a difficult time.",
 	},
 	{
 		name: "Muhammad Noor",
@@ -20,7 +19,7 @@ export const testimonials = [
 	},
 	{
 		name: "Fatima Khadija",
-		role: "Family Member",
+		role: "Wife of Patient",
 		message:
 			"The nurses were patient, respectful, and caring toward my father. We are deeply grateful for their support and professionalism.",
 	},

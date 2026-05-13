@@ -25,7 +25,7 @@ export const SERVICES: Services[] = [
 		id: "post-discharge",
 		title: "Post Discharge Care",
 		description:
-			"Comprehensive support during your transition from hospital to home, ensuring continuity of care and peace of mind.",
+			"We support your loved one after hospital discharge by continuing care at home, helping them recover safely and comfortably while reducing the risk of complications or readmission.",
 		icon: Home,
 		color: "from-blue-500 to-cyan-500",
 		image: "/images/postdischarge.avif",
@@ -34,7 +34,7 @@ export const SERVICES: Services[] = [
 		id: "mobility-assistance",
 		title: "Mobility Assistance",
 		description:
-			"Safe and dignified support for daily movement, helping maintain independence and prevent falls.",
+			"We assist with safe movement around the home, helping your loved ones maintain independence, confidence, and stability while reducing the risk of falls.",
 		icon: Accessibility,
 		color: "from-green-500 to-emerald-500",
 		image: "/images/mobility.png",
@@ -43,7 +43,7 @@ export const SERVICES: Services[] = [
 		id: "nutrition-support",
 		title: "Feeding & Nutrition Support",
 		description:
-			"Personalized meal planning and feeding assistance to maintain optimal health and nutrition.",
+			"We ensure your loved ones receive proper nutrition through meal support and feeding assistance tailored to their health needs and recovery journey.",
 		icon: Apple,
 		color: "from-orange-500 to-red-500",
 		image: "/images/feeding.png",
@@ -53,7 +53,7 @@ export const SERVICES: Services[] = [
 		id: "wound-care",
 		title: "Wound Care Management",
 		description:
-			"Professional wound assessment, cleaning, and dressing changes following medical protocols.",
+			"We provide careful wound care at home, following medical guidance to promote healing, prevent infection, and ensure comfort during recovery.",
 		icon: Bandage,
 		color: "from-pink-500 to-rose-500",
 		image: "/images/wound.avif",
@@ -62,7 +62,7 @@ export const SERVICES: Services[] = [
 		id: "monitoring-vitals",
 		title: "Monitoring Vitals",
 		description:
-			"Regular monitoring of blood pressure, temperature, pulse, and other vital signs for your safety.",
+			"We regularly monitor vital signs to ensure early detection of health changes and provide timely medical attention when needed.",
 		icon: BarChart,
 		color: "from-purple-500 to-violet-500",
 		image: "/images/vitals.avif",
@@ -71,7 +71,7 @@ export const SERVICES: Services[] = [
 		id: "bathing-grooming",
 		title: "Bathing & Grooming",
 		description:
-			"Respectful personal care assistance maintaining dignity while ensuring cleanliness and comfort.",
+			"We assist with personal hygiene in a respectful and dignified manner, ensuring your loved ones remain clean, comfortable, and confident.",
 		icon: Bath,
 		color: "from-teal-500 to-cyan-500",
 		image: "/images/bathing.png",
@@ -80,7 +80,7 @@ export const SERVICES: Services[] = [
 		id: "elderly-care",
 		title: "Elderly Home Care",
 		description:
-			"Specialized care for seniors, promoting aging in place with comfort, safety, and companionship.",
+			"We provide gentle, compassionate care for the elderly, helping them live safely and comfortably at home while receiving companionship and daily support.",
 		icon: Users,
 		color: "from-indigo-500 to-blue-500",
 		image: "/images/elderly.png",
@@ -89,7 +89,7 @@ export const SERVICES: Services[] = [
 		id: "medication-admin",
 		title: "Medication Administration",
 		description:
-			"Safe and accurate medication management ensuring proper dosages and timing as prescribed.",
+			"We ensure medications are taken correctly and on time, helping avoid missed doses and supporting safe, effective treatment at home.",
 		icon: Pill,
 		color: "from-yellow-500 to-orange-500",
 		image: "/images/medication.png",
@@ -98,7 +98,7 @@ export const SERVICES: Services[] = [
 		id: "nursing-care",
 		title: "Professional Nursing Care",
 		description:
-			"Licensed nursing professionals providing skilled medical care in the comfort of your home.",
+			"Our licensed nurses deliver skilled medical care at home, combining clinical expertise with compassion to support recovery and long-term health.",
 		icon: Stethoscope,
 		color: "from-emerald-500 to-teal-500",
 		image: "/images/nursing.png",

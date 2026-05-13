@@ -58,8 +58,11 @@ const Services = () => {
 						viewport={{ once: true }}
 						variants={paragraphVariants}
 						className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
-						Comprehensive home healthcare services tailored to meet
-						your unique needs with compassion and expertise.
+						We provide compassionate, in-home healthcare services
+						designed to support recovery, independence, and dignity.
+						Whether it’s short-term recovery or long-term care, we
+						bring professional support directly to your home so your
+						loved ones feel safe, comfortable, and cared for.
 					</motion.p>
 				</div>
 

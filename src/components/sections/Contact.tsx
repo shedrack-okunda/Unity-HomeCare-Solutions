@@ -56,9 +56,9 @@ const Contact: React.FC = () => {
 						viewport={{ once: true }}
 						variants={headingVariants}
 						className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-						Get In{" "}
+						Speak to{" "}
 						<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-							Touch
+							Our Care Team
 						</span>
 					</motion.h2>
 
@@ -68,8 +68,9 @@ const Contact: React.FC = () => {
 						viewport={{ once: true }}
 						variants={paragraphVariants}
 						className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
-						Ready to provide the care your family deserves. Contact
-						us today for a free consultation.
+						We are here to support you when care decisions matter
+						most. Whether you need urgent assistance or long-term
+						home care guidance, our team is ready to respond.
 					</motion.p>
 				</div>
 
@@ -84,7 +85,8 @@ const Contact: React.FC = () => {
 								/>
 							),
 							title: "Call Us",
-							description: "Available 24/7 for emergencies",
+							description:
+								"Speak directly to a caregiver or nurse anytime, day or night",
 							content: (
 								<>
 									<a
@@ -113,7 +115,7 @@ const Contact: React.FC = () => {
 							),
 							title: "Email Us",
 							description:
-								"Get a detailed response within 24 hours",
+								"Send us your questions and care needs — we respond promptly with guidance",
 							content: (
 								<a
 									href="mailto:unityhomecare874@gmail.com"
@@ -131,7 +133,8 @@ const Contact: React.FC = () => {
 								/>
 							),
 							title: "Visit Us",
-							description: "Our office is open Monday - Friday",
+							description:
+								"Visit us or schedule a consultation with our care coordinators",
 							content: (
 								<p className="text-green-600 font-semibold">
 									Nairobi, Kenya
@@ -177,7 +180,8 @@ const Contact: React.FC = () => {
 						<Clock className="h-5 w-5 mr-2" aria-hidden="true" />
 
 						<span className="font-medium">
-							Emergency Support Available 24/7
+							24/7 Care Support Available — We’re always here when
+							you need us{" "}
 						</span>
 					</motion.div>
 				</div>

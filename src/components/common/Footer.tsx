@@ -46,8 +46,9 @@ const Footer = () => {
 						variants={fadeUp}
 						custom={1}
 						className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-						Providing compassionate, professional home healthcare
-						services across Nairobi and surrounding areas.
+						We are committed to providing safe, respectful, and
+						compassionate home care — supporting families across
+						Nairobi with dignity, professionalism, and trust.
 					</motion.p>
 
 					<motion.div
@@ -59,13 +60,14 @@ const Footer = () => {
 						className="flex justify-center space-x-6 mb-8">
 						<a
 							href="tel:+254703919412"
-							className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+							className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+							{" "}
 							<Phone className="h-6 w-6" />
 						</a>
 
 						<a
 							href="mailto:unityhomecare874@gmail.com"
-							className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+							className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
 							<Mail className="h-6 w-6" />
 						</a>
 					</motion.div>
@@ -77,9 +79,13 @@ const Footer = () => {
 						variants={fadeUp}
 						custom={3}
 						className="border-t border-gray-300 dark:border-gray-700 pt-8">
+						<p className="text-gray-50">
+							Available 24/7 for home care support across Nairobi
+						</p>
+
 						<p className="text-gray-500 text-sm">
-							© {year} Unity HomeCare Solutions. All rights
-							reserved.
+							© {year} Unity HomeCare Solutions. Caring for
+							families with dignity and respect.
 						</p>
 					</motion.div>
 				</div>
