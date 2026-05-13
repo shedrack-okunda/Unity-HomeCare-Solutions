@@ -37,19 +37,20 @@ const AboutUs = () => {
 							className="space-y-6">
 							<h2
 								id="about-title"
-								className="text-4xl text-center lg:text-5xl font-bold text-gray-900 dark:text-white">
-								Why Choose{" "}
+								className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white text-center lg:text-left">
+								Why Families Trust{" "}
 								<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 									Unity HomeCare Solutions?
 								</span>
 							</h2>
 
 							<p className="text-xl text-center leading-relaxed text-gray-600 dark:text-gray-300">
-								We believe that quality healthcare should be
-								accessible in the comfort of your own home. Our
-								dedicated team of professionals provides
-								personalized care with compassion, dignity, and
-								respect.
+								We bring professional and compassionate
+								healthcare directly into the home, so families
+								can feel confident their loved ones are safe,
+								cared for, and treated with dignity. We don’t
+								just provide care — we support families through
+								every step of the healing journey.
 							</p>
 						</motion.div>
 
@@ -63,7 +64,7 @@ const AboutUs = () => {
 											className="h-8 w-8 text-blue-600 mb-4"
 										/>
 									),
-									title: "Licensed Professionals",
+									title: "Certified Caregivers & Nurses",
 									desc: "Certified healthcare providers with years of experience",
 									classes:
 										"bg-blue-50 dark:bg-gray-800 border-blue-100 dark:border-gray-700",
@@ -75,8 +76,8 @@ const AboutUs = () => {
 											className="h-8 w-8 text-purple-600 mb-4"
 										/>
 									),
-									title: "24/7 Availability",
-									desc: "Round-the-clock support when you need it most",
+									title: "Always Available Support",
+									desc: "Care and assistance whenever your family needs it — day or night",
 									classes:
 										"bg-purple-50 dark:bg-gray-800 border-purple-100 dark:border-gray-700",
 								},
