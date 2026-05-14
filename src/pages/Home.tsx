@@ -9,6 +9,7 @@ import Contact from "../components/sections/Contact";
 import { useTheme } from "../../hooks/useTheme";
 import Testimonials from "../components/sections/Testimonials";
 import HowItWorks from "../components/sections/HowItWorks";
+import WhatsAppFloat from "../components/common/WhatsAppFloat";
 
 const UnityHomeCare = () => {
 	const { darkMode, toggleTheme } = useTheme();
@@ -46,6 +47,8 @@ const UnityHomeCare = () => {
 			<Testimonials />
 			<Contact />
 			<Footer />
+
+			<WhatsAppFloat/>
 		</div>
 	);
 };
