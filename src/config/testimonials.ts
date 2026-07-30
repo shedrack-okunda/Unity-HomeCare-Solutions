@@ -21,7 +21,7 @@ export const testimonials = [
 		name: "Fatima Khadija",
 		role: "Wife of Patient",
 		message:
-			"The nurses were patient, respectful, and caring toward my father. We are deeply grateful for their support and professionalism.",
+			"The nurses were patient, respectful, and caring towards my husband. We are deeply grateful for their support and professionalism.",
 	},
 	{
 		name: "Maryanne Moraa",
