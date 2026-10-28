@@ -35,7 +35,8 @@ const Services = () => {
 		<section
 			id="services"
 			aria-labelledby="services-heading"
-			className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
+			className="py-20 px-6 bg-gray-50 dark:bg-gray-800"
+		>
 			<div className="container mx-auto">
 				{/* Header */}
 				<div className="text-center mb-16">
@@ -45,7 +46,8 @@ const Services = () => {
 						whileInView="visible"
 						viewport={{ once: true }}
 						variants={headingVariants}
-						className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+						className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white"
+					>
 						Our{" "}
 						<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 							Services
@@ -57,29 +59,20 @@ const Services = () => {
 						whileInView="visible"
 						viewport={{ once: true }}
 						variants={paragraphVariants}
-						className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
-						We provide compassionate, in-home healthcare services
-						designed to support recovery, independence, and dignity.
-						Whether it’s short-term recovery or long-term care, we
-						bring professional support directly to your home so your
-						loved ones feel safe, comfortable, and cared for.
+						className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300"
+					>
+						We provide compassionate, in-home healthcare services designed to
+						support recovery, independence, and dignity. Whether it’s short-term
+						recovery or long-term care, we bring professional support directly
+						to your home so your loved ones feel safe, comfortable, and cared
+						for.
 					</motion.p>
 				</div>
 
 				{/* Cards */}
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
 					{SERVICES.map(
-						(
-							{
-								id,
-								title,
-								description,
-								icon: Icon,
-								color,
-								image,
-							},
-							i,
-						) => (
+						({ id, title, description, icon: Icon, color, image }, i) => (
 							<motion.div
 								key={id}
 								custom={i}
@@ -87,7 +80,8 @@ const Services = () => {
 								whileInView="visible"
 								viewport={{ once: true }}
 								variants={cardVariants}
-								className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-br from-blue-50 via-purple-100 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 border border-gray-100 dark:border-gray-700 flex flex-col">
+								className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-br from-blue-50 via-purple-100 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 border border-gray-100 dark:border-gray-700 flex flex-col"
+							>
 								{/* Icon + Title */}
 								<div className="relative z-10 p-4 sm:p-6 lg:p-8">
 									<motion.div
@@ -98,7 +92,8 @@ const Services = () => {
 											duration: 0.5,
 											delay: 0.2,
 										}}
-										className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl bg-gradient-to-r ${color} flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+										className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl bg-gradient-to-r ${color} flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform shadow-lg`}
+									>
 										<Icon aria-hidden="true" />
 									</motion.div>
 
@@ -110,7 +105,8 @@ const Services = () => {
 											duration: 0.6,
 											delay: 0.3,
 										}}
-										className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-white">
+										className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-white"
+									>
 										{title}
 									</motion.h3>
 								</div>
@@ -141,7 +137,8 @@ const Services = () => {
 											duration: 0.6,
 											delay: 0.5,
 										}}
-										className="text-md md:text-base lg:text-base leading-relaxed text-gray-700 dark:text-white">
+										className="text-md md:text-base lg:text-base leading-relaxed text-gray-700 dark:text-white"
+									>
 										{description}
 									</motion.p>
 

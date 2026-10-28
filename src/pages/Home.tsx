@@ -6,13 +6,11 @@ import AboutUs from "../components/sections/About";
 import Footer from "../components/common/Footer";
 import { SERVICES } from "../config/services";
 import Contact from "../components/sections/Contact";
-import { useTheme } from "../../hooks/useTheme";
 import Testimonials from "../components/sections/Testimonials";
 import HowItWorks from "../components/sections/HowItWorks";
 import WhatsAppFloat from "../components/common/WhatsAppFloat";
 
 const UnityHomeCare = () => {
-	const { darkMode, toggleTheme } = useTheme();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [activeService, setActiveService] = useState(0);
 	console.log(activeService);
@@ -25,17 +23,13 @@ const UnityHomeCare = () => {
 	}, []);
 
 	const scrollToSection = (sectionId: string) => {
-		document
-			.getElementById(sectionId)
-			?.scrollIntoView({ behavior: "smooth" });
+		document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
 		setIsMenuOpen(false);
 	};
 
 	return (
 		<div className="min-h-screen transition-all duration-500 bg-white dark:bg-gray-900">
 			<Navbar
-				darkMode={darkMode}
-				toggleDarkMode={toggleTheme}
 				isMenuOpen={isMenuOpen}
 				setIsMenuOpen={setIsMenuOpen}
 				scrollToSection={scrollToSection}
@@ -43,12 +37,12 @@ const UnityHomeCare = () => {
 			<Hero scrollToSection={scrollToSection} />
 			<AboutUs />
 			<Services />
-			<HowItWorks/>
+			<HowItWorks />
 			<Testimonials />
 			<Contact />
 			<Footer />
 
-			<WhatsAppFloat/>
+			<WhatsAppFloat />
 		</div>
 	);
 };

@@ -24,7 +24,8 @@ const AboutUs = () => {
 		<section
 			id="about"
 			aria-labelledby="about-title"
-			className="py-20 px-6 bg-white dark:bg-gray-900">
+			className="py-20 px-6 bg-white dark:bg-gray-900"
+		>
 			<div className="container mx-auto">
 				<div className="grid lg:grid-cols-2 gap-16 items-center">
 					{/* Left Content */}
@@ -34,10 +35,12 @@ const AboutUs = () => {
 							whileInView="visible"
 							viewport={{ once: true, amount: 0.3 }}
 							variants={textVariants}
-							className="space-y-6">
+							className="space-y-6"
+						>
 							<h2
 								id="about-title"
-								className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white text-center lg:text-left">
+								className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white text-center lg:text-left"
+							>
 								Why Families Trust{" "}
 								<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 									Unity HomeCare Solutions?
@@ -45,12 +48,11 @@ const AboutUs = () => {
 							</h2>
 
 							<p className="text-xl text-center leading-relaxed text-gray-600 dark:text-gray-300">
-								We bring professional and compassionate
-								healthcare directly into the home, so families
-								can feel confident their loved ones are safe,
-								cared for, and treated with dignity. We don’t
-								just provide care — we support families through
-								every step of the healing journey.
+								We bring professional and compassionate healthcare directly into
+								the home, so families can feel confident their loved ones are
+								safe, cared for, and treated with dignity. We don’t just provide
+								care — we support families through every step of the healing
+								journey.
 							</p>
 						</motion.div>
 
@@ -89,7 +91,8 @@ const AboutUs = () => {
 									viewport={{ once: true, amount: 0.2 }}
 									custom={i}
 									variants={cardVariants}
-									className={`p-6 rounded-xl border ${card.classes}`}>
+									className={`p-6 rounded-xl border ${card.classes}`}
+								>
 									{card.icon}
 
 									<h3 className="font-semibold mb-2 text-gray-900 dark:text-white">
@@ -160,7 +163,8 @@ const AboutUs = () => {
 									viewport={{ once: true, amount: 0.2 }}
 									custom={i}
 									variants={cardVariants}
-									className={`p-6 rounded-2xl border ${card.classes}`}>
+									className={`p-6 rounded-2xl border ${card.classes}`}
+								>
 									{card.icon}
 
 									<h4 className="font-semibold text-gray-900 dark:text-white">

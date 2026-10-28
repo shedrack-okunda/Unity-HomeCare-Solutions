@@ -26,8 +26,8 @@ const HowItWorks = () => {
 				</h2>
 
 				<p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
-					Simple steps to get compassionate home care for your loved
-					ones without stress.
+					Simple steps to get compassionate home care for your loved ones
+					without stress.
 				</p>
 
 				<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -44,7 +44,8 @@ const HowItWorks = () => {
 								scale: 1.03,
 								transition: { duration: 0.25, ease: "easeOut" },
 							}}
-							className="group p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300">
+							className="group p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300"
+						>
 							<div className="flex justify-center mb-4">
 								<div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
 									{" "}

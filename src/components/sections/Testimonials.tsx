@@ -36,9 +36,7 @@ const Testimonials = () => {
 	const nextSlide = () => {
 		setDirection(1);
 
-		setCurrentIndex((prev) =>
-			prev + 1 >= testimonials.length ? 0 : prev + 1,
-		);
+		setCurrentIndex((prev) => (prev + 1 >= testimonials.length ? 0 : prev + 1));
 	};
 
 	const prevSlide = () => {
@@ -58,9 +56,7 @@ const Testimonials = () => {
 	];
 
 	return (
-		<section
-			id="testimonials"
-			className="py-20 px-6 bg-white dark:bg-gray-900">
+		<section id="testimonials" className="py-20 px-6 bg-white dark:bg-gray-900">
 			<div className="container mx-auto">
 				{/* Heading */}
 				<div className="text-center mb-14">
@@ -74,8 +70,8 @@ const Testimonials = () => {
 					</h2>
 
 					<p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
-						Real experiences from patients and families who trusted
-						Unity HomeCare Solutions with their loved ones.
+						Real experiences from patients and families who trusted Unity
+						HomeCare Solutions with their loved ones.
 					</p>
 				</div>
 
@@ -84,14 +80,16 @@ const Testimonials = () => {
 					{/* Left Arrow */}
 					<button
 						onClick={prevSlide}
-						className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-1   dark:border-gray-700 hover:scale-110 transition-all duration-300">
+						className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-1   dark:border-gray-700 hover:scale-110 transition-all duration-300"
+					>
 						<ChevronLeft className="h-6 w-6 text-gray-700 dark:text-white" />
 					</button>
 
 					{/* Right Arrow */}
 					<button
 						onClick={nextSlide}
-						className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-1  dark:border-gray-700 hover:scale-110 transition-all duration-300">
+						className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-1  dark:border-gray-700 hover:scale-110 transition-all duration-300"
+					>
 						<ChevronRight className="h-6 w-6 text-gray-700 dark:text-white" />
 					</button>
 
@@ -110,7 +108,8 @@ const Testimonials = () => {
 										className={`rounded-3xl border border-gray-100 dark:border-gray-700 
 bg-gray-50 dark:bg-gray-800 shadow-md hover:shadow-2xl 
 transition-all duration-500 overflow-hidden
-${i > 0 ? "hidden lg:block" : "block"}`}>
+${i > 0 ? "hidden lg:block" : "block"}`}
+									>
 										<div className="p-4">
 											{/* Top */}
 											<div className="items-center gap-4 mb-4">

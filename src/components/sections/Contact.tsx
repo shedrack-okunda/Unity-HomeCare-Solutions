@@ -45,7 +45,8 @@ const Contact: React.FC = () => {
 		<section
 			id="contact"
 			aria-labelledby="contact-heading"
-			className="py-20 px-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+			className="py-20 px-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900"
+		>
 			<div className="container mx-auto">
 				{/* Header */}
 				<div className="text-center mb-16">
@@ -55,7 +56,8 @@ const Contact: React.FC = () => {
 						whileInView="visible"
 						viewport={{ once: true }}
 						variants={headingVariants}
-						className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+						className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white"
+					>
 						Speak to{" "}
 						<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 							Our Care Team
@@ -67,10 +69,11 @@ const Contact: React.FC = () => {
 						whileInView="visible"
 						viewport={{ once: true }}
 						variants={paragraphVariants}
-						className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
-						We are here to support you when care decisions matter
-						most. Whether you need urgent assistance or long-term
-						home care guidance, our team is ready to respond.
+						className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300"
+					>
+						We are here to support you when care decisions matter most. Whether
+						you need urgent assistance or long-term home care guidance, our team
+						is ready to respond.
 					</motion.p>
 				</div>
 
@@ -78,12 +81,7 @@ const Contact: React.FC = () => {
 				<div className="grid lg:grid-cols-3 gap-8">
 					{[
 						{
-							icon: (
-								<Phone
-									className="h-8 w-8 text-white"
-									aria-hidden="true"
-								/>
-							),
+							icon: <Phone className="h-8 w-8 text-white" aria-hidden="true" />,
 							title: "Call Us",
 							description:
 								"Speak directly to a caregiver or nurse anytime, day or night",
@@ -91,7 +89,8 @@ const Contact: React.FC = () => {
 								<>
 									<a
 										href="tel:+254703919412"
-										className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+										className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+									>
 										+254 703 919 412
 									</a>
 									<span className="text-gray-600 dark:text-gray-300">
@@ -99,7 +98,8 @@ const Contact: React.FC = () => {
 									</span>
 									<a
 										href="tel:+254724551516"
-										className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+										className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+									>
 										+254 724 551 516
 									</a>
 								</>
@@ -107,19 +107,15 @@ const Contact: React.FC = () => {
 							gradient: "from-blue-500 to-cyan-500",
 						},
 						{
-							icon: (
-								<Mail
-									className="h-8 w-8 text-white"
-									aria-hidden="true"
-								/>
-							),
+							icon: <Mail className="h-8 w-8 text-white" aria-hidden="true" />,
 							title: "Email Us",
 							description:
 								"Send us your questions and care needs — we respond promptly with guidance",
 							content: (
 								<a
 									href="mailto:unityhomecare874@gmail.com"
-									className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+									className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+								>
 									unityhomecare874@gmail.com
 								</a>
 							),
@@ -127,18 +123,13 @@ const Contact: React.FC = () => {
 						},
 						{
 							icon: (
-								<MapPin
-									className="h-8 w-8 text-white"
-									aria-hidden="true"
-								/>
+								<MapPin className="h-8 w-8 text-white" aria-hidden="true" />
 							),
 							title: "Visit Us",
 							description:
 								"Visit us or schedule a consultation with our care coordinators",
 							content: (
-								<p className="text-green-600 font-semibold">
-									Nairobi, Kenya
-								</p>
+								<p className="text-green-600 font-semibold">Nairobi, Kenya</p>
 							),
 							gradient: "from-green-500 to-teal-500",
 						},
@@ -150,9 +141,11 @@ const Contact: React.FC = () => {
 							whileInView="visible"
 							viewport={{ once: true }}
 							variants={cardVariants}
-							className="p-8 rounded-2xl text-center transition-all hover:scale-105 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-lg">
+							className="p-8 rounded-2xl text-center transition-all hover:scale-105 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-lg"
+						>
 							<div
-								className={`w-16 h-16 bg-gradient-to-r ${card.gradient} rounded-full flex items-center justify-center mx-auto mb-6`}>
+								className={`w-16 h-16 bg-gradient-to-r ${card.gradient} rounded-full flex items-center justify-center mx-auto mb-6`}
+							>
 								{card.icon}
 							</div>
 
@@ -176,12 +169,13 @@ const Contact: React.FC = () => {
 						whileInView="visible"
 						viewport={{ once: true }}
 						variants={footerNoteVariants}
-						className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 border border-blue-200 dark:border-blue-700">
+						className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 border border-blue-200 dark:border-blue-700"
+					>
 						<Clock className="h-5 w-5 mr-2" aria-hidden="true" />
 
 						<span className="font-medium">
-							24/7 Care Support Available — We’re always here when
-							you need us{" "}
+							24/7 Care Support Available — We’re always here when you need
+							us{" "}
 						</span>
 					</motion.div>
 				</div>

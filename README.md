@@ -8,7 +8,6 @@ A modern, responsive website for Unity Home Care Services - a professional healt
 
 ### ✨ **User Experience**
 
--   **🌓 Dark/Light Mode Toggle** - Seamless theme switching with smooth transitions
 -   **📱 Fully Responsive** - Optimized for desktop, tablet, and mobile devices
 -   **🎨 Modern Design** - Contemporary gradients, animations, and glassmorphism effects
 -   **♿ Accessible** - WCAG 2.1 AA compliant with keyboard navigation support
@@ -219,7 +218,6 @@ Need help with the website? Here are your options:
 
 -   📧 **Email**: [okundashedrack@gmail.com](mailto:okundashedrack@gmail.com)
 -   📱 **Phone**: Available during business hours
--   💬 **Slack**: #unity-homecare-website
 
 ### **Business Support**
 
@@ -228,7 +226,7 @@ Need help with the website? Here are your options:
 
 ## 📈 Roadmap
 
-**Last Updated**: July 2025
+**Last Updated**: October 2026
 **Version**: 1.0.0
 **Status**: Production Ready ✅
 
