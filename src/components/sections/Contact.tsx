@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
 		<section
 			id="contact"
 			aria-labelledby="contact-heading"
-			className="py-10 px-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900"
+			className="py-4 px-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900"
 		>
 			<div className="container mx-auto">
 				{/* Header */}

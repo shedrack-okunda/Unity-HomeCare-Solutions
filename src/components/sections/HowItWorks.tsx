@@ -16,7 +16,7 @@ const cardVariants: Variants = {
 
 const HowItWorks = () => {
 	return (
-		<section className="py-12 px-6 bg-gray-50 dark:bg-gray-800">
+		<section className="py-6 px-6 bg-gray-50 dark:bg-gray-800">
 			<div className="container mx-auto text-center">
 				<h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
 					How It{" "}

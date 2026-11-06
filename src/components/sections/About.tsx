@@ -26,7 +26,7 @@ const AboutUs = () => {
 			<section
 				id="about"
 				aria-labelledby="about-title"
-				className="py-10 px-6 bg-white dark:bg-gray-900"
+				className="py-4 px-6 bg-white dark:bg-gray-900"
 			>
 				<div className="container mx-auto">
 					<div className="grid lg:grid-cols-2 gap-16 items-center">
