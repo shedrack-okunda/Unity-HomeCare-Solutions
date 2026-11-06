@@ -35,7 +35,7 @@ const Services = () => {
 		<section
 			id="services"
 			aria-labelledby="services-heading"
-			className="py-20 px-6 bg-gray-50 dark:bg-gray-800"
+			className="py-10 px-6 bg-gray-50 dark:bg-gray-800"
 		>
 			<div className="container mx-auto">
 				{/* Header */}

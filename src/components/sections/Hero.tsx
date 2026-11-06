@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
 		<section
 			id="home"
 			aria-labelledby="hero-heading"
-			className="pt-20 pb-16 px-6 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900"
+			className="pt-10 pb-16 px-6 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900"
 		>
 			<div className="container mx-auto">
 				<div className="grid lg:grid-cols-2 gap-12 items-center">

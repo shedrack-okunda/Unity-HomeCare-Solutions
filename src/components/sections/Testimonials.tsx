@@ -65,7 +65,7 @@ const Testimonials = () => {
 	return (
 		<section
 			id="testimonials"
-			className="py-24 px-6 bg-slate-50/50 dark:bg-gray-900/60 relative overflow-hidden"
+			className="py-10 px-6 bg-slate-50/50 dark:bg-gray-900/60 relative overflow-hidden"
 		>
 			{/* Ambient Background Glows */}
 			<div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
