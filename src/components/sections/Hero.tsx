@@ -1,10 +1,7 @@
 import { ArrowRight, Shield } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import type React from "react";
-
-interface HeroProps {
-	scrollToSection: (sectionId: string) => void;
-}
 
 // 🎨 Title animation: spring, bouncy
 const titleVariants: Variants = {
@@ -65,7 +62,9 @@ const imageVariants: Variants = {
 	},
 };
 
-const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
+const Hero: React.FC = () => {
+	const navigate = useNavigate();
+
 	return (
 		<section
 			id="home"
@@ -124,12 +123,12 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
 							{[
 								{
 									label: "Explore Our Services",
-									onClick: () => scrollToSection("services"),
+									onClick: () => navigate("/services"),
 									primary: true,
 								},
 								{
 									label: "Get In Touch",
-									onClick: () => scrollToSection("contact"),
+									onClick: () => navigate("/contact"),
 									primary: false,
 								},
 							].map((btn, i) => (
@@ -146,10 +145,10 @@ px-6 py-3 rounded-xl font-semibold text-base transition-all focus:outline-none f
 ${
 	btn.primary
 		? `group bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white 
-		hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 
-		shadow-lg hover:shadow-blue-500/40 
-		border border-transparent hover:border-blue-400 
-		hover:-translate-y-0.5`
+        hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 
+        shadow-lg hover:shadow-blue-500/40 
+        border border-transparent hover:border-blue-400 
+        hover:-translate-y-0.5`
 		: "border-2 border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-300 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-gray-500"
 }`}
 								>

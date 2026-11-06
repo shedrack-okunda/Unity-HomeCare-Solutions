@@ -1,83 +1,73 @@
-import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { NavLinks } from "../../config/navigation";
 
-interface NavbarProps {
-	isMenuOpen: boolean;
-	setIsMenuOpen: (val: boolean) => void;
-	scrollToSection: (id: string) => void;
-}
+const Navbar = () => {
+	const location = useLocation();
 
-const Navbar = ({
-	isMenuOpen,
-	setIsMenuOpen,
-	scrollToSection,
-}: NavbarProps) => {
 	return (
-		<nav className="fixed w-full z-50 transition-all duration-300 bg-white/95 dark:bg-gray-900/95 border-b border-gray-100 dark:border-gray-700 backdrop-blur-lg">
-			<div className="container mx-auto px-6 py-4 flex items-center justify-between">
-				{/* Logo */}
-				<div className="flex items-center space-x-3">
-					<img
-						src="/images/unitylogo.png"
-						alt="Unity Logo"
-						loading="lazy"
-						className="w-10 h-10 rounded-full"
-					/>
+		<>
+			{/* Top Bar: Brand logo & Desktop Navigation */}
+			<nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/95 dark:bg-gray-900/95 border-b border-gray-100 dark:border-gray-700 backdrop-blur-lg">
+				<div className="container mx-auto px-6 py-4 flex items-center justify-between">
+					{/* Logo */}
+					<Link to="/" className="flex items-center space-x-3">
+						<img
+							src="/images/unitylogo.png"
+							alt="Unity Logo"
+							loading="lazy"
+							className="w-10 h-10 rounded-full"
+						/>
+						<span className="text-md font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+							Unity HomeCare
+						</span>
+					</Link>
 
-					<span className="text-md font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-						Unity HomeCare
-					</span>
-				</div>
-
-				{/* Desktop Menu */}
-				<div className="hidden md:flex items-center space-x-8">
-					{["home", "about", "services", "testimonials", "contact"].map(
-						(section) => (
-							<button
-								key={section}
-								onClick={() => scrollToSection(section)}
-								className="font-bold text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-							>
-								{section.charAt(0).toUpperCase() + section.slice(1)}
-							</button>
-						),
-					)}
-				</div>
-
-				{/* Mobile Menu Button */}
-				<div className="flex items-center space-x-4 md:hidden">
-					<button
-						onClick={() => setIsMenuOpen(!isMenuOpen)}
-						aria-label="Toggle Menu"
-						className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white"
-					>
-						{isMenuOpen ? (
-							<X className="h-6 w-6" />
-						) : (
-							<Menu className="h-6 w-6" />
-						)}
-					</button>
-				</div>
-			</div>
-
-			{/* Mobile Menu Dropdown with proper padding */}
-			{isMenuOpen && (
-				<div className="md:hidden px-6 pb-4 pt-2 bg-white/95 dark:bg-gray-900/95 border-b border-gray-100 dark:border-gray-700 shadow-lg">
-					<div className="flex flex-col space-y-2">
-						{["home", "about", "services", "testimonials", "contact"].map(
-							(section) => (
-								<button
-									key={section}
-									onClick={() => scrollToSection(section)}
-									className="font-bold block w-full text-left py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+					{/* Desktop Menu with Icons */}
+					<div className="hidden md:flex items-center space-x-6">
+						{NavLinks.map(({ path, name, icon: Icon }) => {
+							const isActive = location.pathname === path;
+							return (
+								<Link
+									key={path}
+									to={path}
+									className={`flex items-center space-x-2 font-bold transition-colors py-1 px-3 rounded-lg ${
+										isActive
+											? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800"
+											: "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+									}`}
 								>
-									{section.charAt(0).toUpperCase() + section.slice(1)}
-								</button>
-							),
-						)}
+									<Icon className="w-4 h-4" />
+									<span>{name}</span>
+								</Link>
+							);
+						})}
 					</div>
 				</div>
-			)}
-		</nav>
+			</nav>
+
+			{/* Mobile Bottom Navigation Bar */}
+			<nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 border-t border-gray-200 dark:border-gray-800 backdrop-blur-lg px-2 py-2">
+				<div className="flex justify-around items-center">
+					{NavLinks.map(({ path, name, icon: Icon }) => {
+						const isActive = location.pathname === path;
+						return (
+							<Link
+								key={path}
+								to={path}
+								className={`flex flex-col items-center justify-center space-y-1 py-1 px-2 rounded-lg text-xs font-semibold transition-colors ${
+									isActive
+										? "text-blue-600 dark:text-blue-400"
+										: "text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+								}`}
+							>
+								<Icon className="w-5 h-5" />
+								<span className="text-[10px]">{name}</span>
+							</Link>
+						);
+					})}
+				</div>
+			</nav>
+		</>
 	);
 };
 
