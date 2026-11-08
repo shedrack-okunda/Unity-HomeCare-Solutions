@@ -79,7 +79,6 @@ const Hero: React.FC = () => {
 							<motion.div
 								initial="hidden"
 								whileInView="visible"
-								viewport={{ once: true }}
 								variants={paragraphVariants}
 								className="inline-flex items-center px-4 py-2 mt-4 rounded-full bg-blue-100 text-blue-800 border border-blue-200 dark:bg-blue-900/50 dark:text-blue-300 dark:border-blue-700"
 							>
@@ -93,8 +92,8 @@ const Hero: React.FC = () => {
 							<motion.h1
 								id="hero-heading"
 								initial="hidden"
-								whileInView="visible"
-								viewport={{ once: true }}
+								animate="visible"
+								viewport={{ once: true, amount: 0.2 }}
 								variants={titleVariants}
 								className="text-3xl lg:text-5xl font-bold leading-tight text-gray-900 dark:text-white"
 							>
@@ -107,8 +106,8 @@ const Hero: React.FC = () => {
 
 							<motion.p
 								initial="hidden"
-								whileInView="visible"
-								viewport={{ once: true }}
+								animate="visible"
+								viewport={{ once: true, amount: 0.2 }}
 								variants={paragraphVariants}
 								className="text-xl leading-relaxed text-gray-600 dark:text-gray-300"
 							>
@@ -136,8 +135,8 @@ const Hero: React.FC = () => {
 									key={i}
 									custom={i}
 									initial="hidden"
-									whileInView="visible"
-									viewport={{ once: true }}
+									animate="visible"
+									viewport={{ once: true, amount: 0.2 }}
 									variants={buttonVariants}
 									onClick={btn.onClick}
 									className={`inline-flex items-center justify-center gap-2 
@@ -175,8 +174,8 @@ ${
 									key={i}
 									custom={i}
 									initial="hidden"
-									whileInView="visible"
-									viewport={{ once: true }}
+									animate="visible"
+									viewport={{ once: true, amount: 0.2 }}
 									variants={statsVariants}
 									className="text-center"
 								>
@@ -195,8 +194,8 @@ ${
 					{/* Right image */}
 					<motion.div
 						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true }}
+						animate="visible"
+						viewport={{ once: true, amount: 0.2 }}
 						variants={imageVariants}
 						className="relative"
 					>
@@ -204,7 +203,7 @@ ${
 							src="/images/hero.png"
 							alt="Professional nurse providing compassionate care to elderly patient"
 							className="w-full h-auto rounded-2xl shadow-2xl object-cover"
-							loading="lazy"
+							loading="eager"
 							width={600}
 							height={500}
 						/>

@@ -3,27 +3,24 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { testimonials } from "../../config/testimonials";
 
-const cardVariants: Variants = {
+const slideVariants: Variants = {
 	hidden: (direction: number) => ({
-		x: direction > 0 ? 80 : -80,
+		x: direction > 0 ? 50 : -50,
 		opacity: 0,
-		scale: 0.96,
 	}),
 	visible: {
 		x: 0,
 		opacity: 1,
-		scale: 1,
 		transition: {
-			duration: 0.4,
-			ease: [0.25, 1, 0.5, 1],
+			duration: 0.35,
+			ease: "easeOut",
 		},
 	},
 	exit: (direction: number) => ({
-		x: direction > 0 ? -80 : 80,
+		x: direction > 0 ? -50 : 50,
 		opacity: 0,
-		scale: 0.96,
 		transition: {
-			duration: 0.3,
+			duration: 0.25,
 			ease: "easeInOut",
 		},
 	}),
@@ -46,14 +43,12 @@ const Testimonials = () => {
 		);
 	};
 
-	// Autoplay feature
+	// Autoplay feature with clean effect binding
 	useEffect(() => {
 		if (!isAutoPlaying) return;
-		const interval = setInterval(() => {
-			nextSlide();
-		}, 5000);
+		const interval = setInterval(nextSlide, 5000);
 		return () => clearInterval(interval);
-	}, [currentIndex, isAutoPlaying]);
+	}, [isAutoPlaying, currentIndex]);
 
 	// Desktop: 3 visible cards | Mobile: 1 card
 	const visibleTestimonials = [
@@ -65,7 +60,7 @@ const Testimonials = () => {
 	return (
 		<section
 			id="testimonials"
-			className="py-6 px-6 bg-slate-50/50 dark:bg-gray-900/60 relative overflow-hidden"
+			className="py-12 px-6 bg-slate-50/50 dark:bg-gray-900/60 relative overflow-hidden"
 		>
 			{/* Ambient Background Glows */}
 			<div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -112,26 +107,28 @@ const Testimonials = () => {
 						<ChevronRight className="h-5 w-5" />
 					</button>
 
-					{/* Cards Grid */}
+					{/* Cards Grid with Optimized AnimatePresence Wrapper */}
 					<div className="overflow-hidden py-4 px-2">
-						<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-							<AnimatePresence mode="wait" custom={direction}>
+						<AnimatePresence mode="wait" custom={direction}>
+							<motion.div
+								key={currentIndex}
+								custom={direction}
+								variants={slideVariants}
+								initial="hidden"
+								animate="visible"
+								exit="exit"
+								className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+							>
 								{visibleTestimonials.map((t, i) => {
-									// Fallback initial avatar if t.avatar doesn't exist
 									const initial = t.name ? t.name.charAt(0) : "U";
 
 									return (
-										<motion.div
-											key={`${t.name}-${currentIndex}-${i}`}
-											custom={direction}
-											variants={cardVariants}
-											initial="hidden"
-											animate="visible"
-											exit="exit"
+										<div
+											key={`${t.name}-${i}`}
 											className={`relative flex flex-col justify-between p-8 rounded-3xl border border-gray-100 dark:border-gray-800/80 
-bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1.5 
-transition-all duration-300 group
-${i > 0 ? "hidden lg:flex" : "flex"}`}
+                                                bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl shadow-lg hover:shadow-2xl 
+                                                transition-all duration-300 group
+                                                ${i > 0 ? "hidden lg:flex" : "flex"}`}
 										>
 											{/* Top Section: Quote Icon & Ratings */}
 											<div>
@@ -162,6 +159,7 @@ ${i > 0 ? "hidden lg:flex" : "flex"}`}
 														src={t.avatar}
 														alt={t.name}
 														className="w-12 h-12 rounded-full object-cover ring-2 ring-blue-500/20"
+														loading="lazy"
 													/>
 												) : (
 													<div className="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 text-white font-bold text-lg flex items-center justify-center ring-2 ring-blue-500/20">
@@ -177,11 +175,11 @@ ${i > 0 ? "hidden lg:flex" : "flex"}`}
 													</p>
 												</div>
 											</div>
-										</motion.div>
+										</div>
 									);
 								})}
-							</AnimatePresence>
-						</div>
+							</motion.div>
+						</AnimatePresence>
 					</div>
 
 					{/* Navigation Indicator Dots */}
