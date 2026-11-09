@@ -20,8 +20,6 @@ const cardVariants: Variants = {
 	}),
 };
 
-// Static data declared outside the component to prevent re-allocation
-
 const AboutUs = () => {
 	return (
 		<>

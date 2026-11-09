@@ -21,7 +21,6 @@ const cardVariants: Variants = {
 	}),
 };
 
-// Static Data declared outside the component lifecycle
 const CONTACT_CARDS = [
 	{
 		icon: Phone,
